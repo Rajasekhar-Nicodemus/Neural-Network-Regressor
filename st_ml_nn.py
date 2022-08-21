@@ -197,7 +197,7 @@ if app_mode=='Training':
            p = st.empty()
            p1=st.empty()
            for i in range(0,epoch):
-             history=model.fit(X_train, y_train, nb_epoch=1, batch_size=batch, validation_split=val_split, verbose=1)
+             history=model.fit(X_train, y_train, epochs=1, batch_size=batch, validation_split=val_split, verbose=1)
              my_bar.progress((i+1)/epoch)
              p.write("Epoch :"+str(i+1)+"/"+str(epoch))
              losses = history.history['mse']
